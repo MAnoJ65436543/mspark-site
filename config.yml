@@ -1,0 +1,29 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "case-studies"
+    label: "Case Studies"
+    folder: "content/case-studies"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Problem", name: "problem", widget: "text" }
+      - { label: "Solution", name: "solution", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
